@@ -1,0 +1,45 @@
+Weather data prediction:
+
+1. In this project, we will discuss whether rain is coming or not.
+
+2. Workflow of the project:
+
+weather dataset---->Exploratoary Data Analysis (EDA)----->Data preprocessing----->Train test split---->Load the various model----->Hyper parameter tuning---->Trained the model---->Prediciton and Evaluation score
+
+3. Data collection and preprocessing:
+3.1 Load the dataset
+3.2 Read the first and last 5 rows
+3.3 Get sim basic information and find some white spaces
+3.4 Remove the white spaces and once again check it.
+3.5 Remove the unwanted columns,
+3.6 Find the missing values and fill them by mode and median.
+3.7 convert from categorical column into numerical column.
+
+4. Exploratory Data Analysis (EDA):
+4.1 Get the statistical measures 
+4.2 Create the histogram plot to analyze all the features
+4.3 Analyise the distribution of the rainfall column which is the targeted data.  The targeted data is highly imbalanced. We need to balance and  have to create the new dataset.
+4.4 Before that create the heatmap to analyze the correlation by correlation matrix.
+4.5 Create a boxplot to check the outliers
+4.6 Drop the highly correlated columns from our given dataset.
+4.7 I use the Over Sampling method which is called SMOTE
+4.8 Check the value counts whether it is balanced or not
+4.9 Save the re_sampled file as a new file.
+4.10 Load the new data file
+
+
+5. Split the feature and targeted data from the new data file.
+
+6. Suffle the new data frame to get a good model.
+
+7. Split the data into training and test
+
+8. I am used the LogisiticRegression with hyperparameter tuning to get the better score.
+8.1 I got the accuracy_score 0.79 by using the Logistic Regression model
+
+9. Second I used the XGBoost Classifier model and I got a score is 0.81 which is a good score compared with the previous model.
+
+10. Third, I used the SVC model and I got the very lowest score 0.49. This mode don't give the good score for this weather prediction data.
+
+11. Finally, I make the prediction system to predict the rainfall by the input data.
+
